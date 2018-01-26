@@ -6,8 +6,9 @@
     <Application.Resources>
         <SolidColorBrush x:Key="low">Red</SolidColorBrush>
         <SolidColorBrush x:Key="medium">Orange</SolidColorBrush>
+        
         <LinearGradientBrush x:Key="high">
-            <GradientStop Color="Lime" Offset="0.0" />
+            <GradientStop Color="#FF236270" Offset="0.0" />
             <GradientStop Color="Orange" Offset="0.4" />
             <GradientStop Color="IndianRed" Offset="1.0" />
         </LinearGradientBrush>

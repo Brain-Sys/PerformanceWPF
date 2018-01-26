@@ -26,15 +26,20 @@
                  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid Background="{Binding Quantity,Converter={StaticResource cnv}}">
+                    <Grid Background="{Binding Quantity,Converter={StaticResource cnv}}"
+                          Height="140">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="{Binding Name}" Grid.Column="0" />
+                        <TextBlock FontStyle="Italic" Margin="16,0,0,0" FontSize="22" Text="{Binding Name}" Grid.Column="0" />
                         <TextBlock Text="{Binding Quantity}" Grid.Column="1" />
-                        <Slider Grid.Column="2" Minimum="0" Maximum="4000" Value="{Binding Quantity}" />
+                        <Slider Grid.Column="2" Minimum="0" Maximum="4000" Value="{Binding Quantity}">
+                            <Slider.RenderTransform>
+                                <RotateTransform Angle="45" />
+                            </Slider.RenderTransform>
+                        </Slider>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

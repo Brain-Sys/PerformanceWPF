@@ -22,6 +22,7 @@ namespace WpfApp1
             this.StartCommand = new RelayCommand(StartCommandExecute);
             this.Articles = new ObservableCollection<Article>();
             load();
+            //StartCommandExecute();
         }
 
         private void load()
